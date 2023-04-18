@@ -1,6 +1,6 @@
 import { Form, FormAnnotation } from "./styles";
 import { TextInput, Button, Text } from "@ignite-ui/react";
-import { ArrowArcRight } from "phosphor-react";
+import { ArrowRight } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -42,7 +42,7 @@ export function ClaimUsernameForm() {
 
         <Button>
           Reservar
-          <ArrowArcRight />
+          <ArrowRight />
         </Button>
       </Form>
       <FormAnnotation>
