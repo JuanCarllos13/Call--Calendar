@@ -22,7 +22,7 @@ export function ClaimUsernameForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<ClaimUsernameFormData>({
     resolver: zodResolver(claimUsernameFormSchema),
   });
@@ -47,7 +47,7 @@ export function ClaimUsernameForm() {
           {...register("username")}
         />
 
-        <Button>
+        <Button disabled={isSubmitting}>
           Reservar
           <ArrowRight />
         </Button>
