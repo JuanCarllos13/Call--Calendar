@@ -1,7 +1,7 @@
-import { Adapter } from "next-auth/adapters";
-import { prisma } from "../prisma";
 import { NextApiRequest, NextApiResponse } from "next";
-import { destroyCookie, parseCookies } from "nookies";
+import { Adapter } from "next-auth/adapters";
+import { parseCookies, destroyCookie } from "nookies";
+import { prisma } from "../prisma";
 
 export function PrismaAdapter(
   req: NextApiRequest,
@@ -14,7 +14,7 @@ export function PrismaAdapter(
       });
 
       if (!userIdOnCookies) {
-        throw new Error("User Id not found on Cookies");
+        throw new Error("User ID not found on cookies.");
       }
 
       const prismaUser = await prisma.user.update({
@@ -180,6 +180,7 @@ export function PrismaAdapter(
       if (!prismaSession) {
         return null;
       }
+
       const { user, ...session } = prismaSession;
 
       return {
