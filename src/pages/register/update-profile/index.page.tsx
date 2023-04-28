@@ -16,7 +16,7 @@ import { FormAnnotation, ProfileBox } from "./styles";
 import { useSession } from "next-auth/react";
 import { GetServerSideProps } from "next";
 import { buildNextAuthOptions } from "@/pages/api/auth/[...nextauth].api";
-import { unstable_getServerSession } from "next-auth";
+import { getServerSession } from "next-auth";
 import { api } from "@/lib/axios";
 import { useRouter } from "next/router";
 
@@ -32,16 +32,14 @@ export default function UpdateProfile() {
   });
 
   const session = useSession();
-  const router = useRouter()
-  console.log(session.data.user.name)
-
+  const router = useRouter();
 
   async function handleUpdateProfile(data: UpdateProfileFormData) {
-    await api.put('/users/profile', {
+    await api.put("/users/profile", {
       bio: data.bio,
-    })
+    });
 
-    await router.push(`/schedule/${session.data.user.name}`)
+    await router.push(`/schedule/${session.data?.user.username}`);
   }
 
   return (
@@ -60,7 +58,6 @@ export default function UpdateProfile() {
           <Text size="sm">Foto de perfil</Text>
           <Avatar
             src={session.data.user.avatar_url}
-            
             alt={session.data.user.name}
           />
         </label>
@@ -84,7 +81,7 @@ export default function UpdateProfile() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  const session = await unstable_getServerSession(
+  const session = await getServerSession(
     req,
     res,
     buildNextAuthOptions(req, res)

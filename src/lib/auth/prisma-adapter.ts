@@ -4,8 +4,8 @@ import { parseCookies, destroyCookie } from "nookies";
 import { prisma } from "../prisma";
 
 export function PrismaAdapter(
-  req: NextApiRequest | NextPageContext['req'],
-  res: NextApiResponse | NextPageContext['res'],
+  req: NextApiRequest | NextPageContext["req"],
+  res: NextApiResponse | NextPageContext["res"]
 ): Adapter {
   return {
     async createUser(user) {
