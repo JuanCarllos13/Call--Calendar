@@ -33,6 +33,7 @@ export default function UpdateProfile() {
 
   const session = useSession();
   const router = useRouter()
+  console.log(session.data.user.name)
 
 
   async function handleUpdateProfile(data: UpdateProfileFormData) {
@@ -41,9 +42,6 @@ export default function UpdateProfile() {
     })
 
     await router.push(`/schedule/${session.data.user.name}`)
-
-    
-
   }
 
   return (
