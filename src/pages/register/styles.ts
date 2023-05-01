@@ -1,4 +1,5 @@
-import { styled, Box, Heading, Text } from "@ignite-ui/react";
+import { styled, Heading } from "@ignite-ui/react";
+import {Text, Button, Box} from '@juancarllos-ui/react'
 
 export const Container = styled("main", {
   maxWidth: 572,
@@ -33,6 +34,5 @@ export const Form = styled(Box, {
 });
 
 export const FormError = styled(Text, {
-  color: '#f75a68'
-
+  color: 'blue'
 })

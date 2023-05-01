@@ -10,7 +10,7 @@ export default function Home() {
     <Container>
       <Hero>
         <Heading size="4xl">Agendamento descomplicado</Heading>
-        <Text size="xl">
+        <Text size="xl" >
           Conecte seu calendário e permita que as pessoas marquem agendamentos
           no seu tempo livre.
         </Text>
