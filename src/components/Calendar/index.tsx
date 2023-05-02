@@ -23,7 +23,7 @@ type CalendarWeeks = CalendarWeek[];
 
 interface CalendarProps {
   selectedDate: Date | null;
-  onDateSelected?: (date: Date) => void;
+  onDateSelected: (date: Date) => void;
 }
 
 export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
@@ -69,7 +69,6 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
       "date",
       currentDate.daysInMonth()
     );
-
     const lastWeekDay = lastDayInCurrentMonth.get("day");
 
     const nextMonthFillArray = Array.from({
@@ -82,11 +81,9 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
       ...previousMonthFillArray.map((date) => {
         return { date, disabled: true };
       }),
-
       ...daysInMonthArray.map((date) => {
         return { date, disabled: date.endOf("day").isBefore(new Date()) };
       }),
-
       ...nextMonthFillArray.map((date) => {
         return { date, disabled: true };
       }),
