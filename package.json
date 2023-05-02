@@ -13,6 +13,7 @@
     "@ignite-ui/react": "^2.2.4",
     "@juancarllos-ui/react": "^1.1.1",
     "@prisma/client": "^4.13.0",
+    "@tanstack/react-query": "^4.29.5",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
