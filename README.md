@@ -1,38 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <br>ICall
+</h1>
 
-## Getting Started
+<h4 align="center">
+  Projeto criado com o intuito de mostrar meus conhecimentos ao decorrer da minha carreira.
+</h4>
 
-First, run the development server:
+https://user-images.githubusercontent.com/86435195/208334714-5cf3e146-e426-4419-93e2-f7b07fe3fc8e.mp4
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## ❓ O que é ?
+
+O projeto é um sistema de agendamento que permite ao usuário criar uma conta de usuário, fazer login com a conta do Google e agendar eventos em uma agenda virtual. O usuário pode selecionar os dias disponíveis para agendamento, de segunda a sexta-feira, com horários disponíveis das 8:00 às 18:00.
+
+Ao selecionar um horário para um evento, o sistema verifica se esse horário já está em uso na agenda e bloqueia os horários que já estão ocupados. Os dias em que o usuário não selecionou também serão bloqueados.
+
+Este sistema de agendamento é útil para pessoas que desejam marcar reuniões ou outros eventos com outras pessoas. Ele garante que o horário e o dia escolhidos estejam disponíveis e evita conflitos de agenda.
+<hr>
+
+<h3>🧭 Rodando a aplicação</h3>
+
+<span class="pl-c"><span class="pl-c"></span> Acesse a pasta do projeto no terminal/cmd e execute os seguintes comandos:</span>
+
 ```
+cd call
+code .
+npm install
+```
+<span class="pl-c"><span class="pl-c"></span>Depois de ter iniciado o projeto no vscode, apenas digite o comando no terminal:</span>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+npm run dev
+```
+<hr>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<span class="pl-c"><span class="pl-c"></span>Lembrando que você precisa criar um arquivo ".env" e adicionar as seguintes informações.</span>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+# Você precisa adicionar as varias de ambiente
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+DATABASE_URL=
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Google Auth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NEXTAUTH_SECRET=
+```
+<hr>
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Seções
+O site é composto por 2 seções diferentes:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Home:** onde o usuário pode criar um username exclusivo para sua conta.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Register:** onde o usuário pode criar uma nova conta ou fazer login com a conta do Google e selecionar os dias disponíveis para agendamento.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Calendar:** onde o usuário pode visualizar a agenda com os horários disponíveis e criar eventos. O usuário deve inserir o nome da pessoa que participará do evento.;
+
+## 💼 Tecnologias utilizadas
+Para o desenvolvimento deste site utilizei as seguintes tecnologias:
+
+- HTML;
+- CSS;
+- JavaScript;
+- React.js;
+- Next.js
+- Prisma
+- MYSQL
+- Zod
+- React Hook Form
+- Node
+- TypeScript
+
+
+
+---
+
+## 👨‍💻 Autor<br>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JuanCarllos13">
+        <img src="https://github.com/JuanCarllos13.png" height="100px" alt="Foto do Juan no GitHub"/><br>
+        <sub>
+          <b>JUAN CARLOS</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+</table>
+<hr>
