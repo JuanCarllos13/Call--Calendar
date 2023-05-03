@@ -1,12 +1,13 @@
 <h1 align="center">
-  <br>ICall
+  <br>Call
 </h1>
 
 <h4 align="center">
   Projeto criado com o intuito de mostrar meus conhecimentos ao decorrer da minha carreira.
 </h4>
 
-https://user-images.githubusercontent.com/86435195/208334714-5cf3e146-e426-4419-93e2-f7b07fe3fc8e.mp4
+![Landing](https://user-images.githubusercontent.com/86435195/236067414-ef58987a-127f-4c10-8ae8-eb641d0ffa9a.png)
+
 
 ## ❓ O que é ?
 
