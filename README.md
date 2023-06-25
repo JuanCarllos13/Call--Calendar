@@ -75,6 +75,8 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 - Node
 - TypeScript
 
+Deploy: https://call-calendar.vercel.app/
+
 
 
 ---
