@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { z } from "zod";
-import { prisma } from "../../../../lib/prisma";
 import dayjs from "dayjs";
 import { google } from "googleapis";
-import { getGoogleOAuthToken } from "@/lib/google";
+import { NextApiRequest, NextApiResponse } from "next";
+import { z } from "zod";
+import { getGoogleOAuthToken } from "../../../../lib/google";
+import { prisma } from "../../../../lib/prisma";
 
 export default async function handler(
   req: NextApiRequest,
@@ -25,14 +25,14 @@ export default async function handler(
     return res.status(400).json({ message: "User does not exist." });
   }
 
-  const createScheduleBodySchema = z.object({
+  const createSchedulingBody = z.object({
     name: z.string(),
     email: z.string().email(),
     observations: z.string(),
     date: z.string().datetime(),
   });
 
-  const { name, email, observations, date } = createScheduleBodySchema.parse(
+  const { name, email, observations, date } = createSchedulingBody.parse(
     req.body
   );
 
@@ -40,7 +40,7 @@ export default async function handler(
 
   if (schedulingDate.isBefore(new Date())) {
     return res.status(400).json({
-      message: "Date is in the past",
+      message: "Date is in the past.",
     });
   }
 
@@ -53,7 +53,7 @@ export default async function handler(
 
   if (conflictingScheduling) {
     return res.status(400).json({
-      message: "There is another scheduling at the same time",
+      message: "There is another scheduling at at the same time.",
     });
   }
 
